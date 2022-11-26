@@ -10,6 +10,19 @@ module.exports = {
         }
     },
 
+    getSearch: async (request, response) => {
+        try {
+            const food = await Food.find({name : { $regex : request.query.name, $options: 'i' } }).populate("category")
+            if (food.length == 0) {
+                response.status(404).send({ message: "Oops, Not Found"})
+            } else {
+                response.send(food)
+            }
+        } catch (error) {
+            response.status(500).send({ message: error.message })
+        }
+    },
+
     getById: async (request, response) => {
         try {
             const food = await Food.findOne({ _id: request.params.id }).populate("category")

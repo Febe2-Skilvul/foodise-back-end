@@ -203,6 +203,33 @@
     }
 ]
 ```
+## **Search Food Data**
+**Request** :
+- Method : GET
+- Endpoint : `<web-service-api>/foods/search?name={:query}`
+- Header : 
+    - Accept : application/json
+**Response** :
+```json
+[
+    {
+        "_id": "string unique",
+        "name": "string",
+        "image": "string",
+        "category": {
+            "_id": "string unique",
+            "name": "string"
+        },
+        "cal": "number",
+        "protein": "number",
+        "carb": "number",
+        "fat": "number",
+        "desc": "string",
+        "createdAt": "date",
+        "updatedAt": "date"
+    }
+]
+```
 
 ## **Add Food Data (ADMIN)**
 **Request** :
@@ -214,7 +241,7 @@
 - Body :
     ```json
     {
-        "name":"string",
+        "name":"string <lowercase>",
         "image": "string",
         "category":"string unique",
         "cal": "number",
