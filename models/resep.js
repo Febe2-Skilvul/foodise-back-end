@@ -5,9 +5,9 @@ const resepSchema = new Schema({
     portion: {
         type : Number
     },
-    healthScore: [{
+    healthScore: {
         type: Number
-    }],
+    },
     overview: {
         type : String,
         required: true
