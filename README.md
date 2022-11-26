@@ -139,13 +139,11 @@
             "_id": "string unique",
             "name": "string"
         },
-        "kalori": "number",
+        "cal": "number",
         "protein": "number",
-        "karbohidrat": "number",
-        "lemak": "number",
-        "deskripsi": "string",
-        "manfaat": "string",
-        "bahaya": "string",
+        "carb": "number",
+        "fat": "number",
+        "desc": "string",
         "createdAt": "date",
         "updatedAt": "date"
     }
@@ -168,13 +166,11 @@
             "_id": "string unique",
             "name": "string"
         },
-        "kalori": "number",
+        "cal": "number",
         "protein": "number",
-        "karbohidrat": "number",
-        "lemak": "number",
-        "deskripsi": "string",
-        "manfaat": "string",
-        "bahaya": "string",
+        "carb": "number",
+        "fat": "number",
+        "desc": "string",
         "createdAt": "date",
         "updatedAt": "date"
     }
@@ -197,13 +193,11 @@
             "_id": "string unique",
             "name": "string"
         },
-        "kalori": "number",
+        "cal": "number",
         "protein": "number",
-        "karbohidrat": "number",
-        "lemak": "number",
-        "deskripsi": "string",
-        "manfaat": "string",
-        "bahaya": "string",
+        "carb": "number",
+        "fat": "number",
+        "desc": "string",
         "createdAt": "date",
         "updatedAt": "date"
     }
@@ -223,13 +217,11 @@
         "name":"string",
         "image": "string",
         "category":"string unique",
-        "kalori": "number",
+        "cal": "number",
         "protein": "number",
-        "karbohidrat": "number",
-        "lemak": "number",
-        "deskripsi" : "string",
-        "manfaat": "string",
-        "bahaya": "string"
+        "carb": "number",
+        "fat": "number",
+        "desc": "string",
     }
     ```
 **Response** :
@@ -240,13 +232,11 @@
         "name":"string",
         "image": "string",
         "category":"string unique",
-        "kalori": "number",
+        "cal": "number",
         "protein": "number",
-        "karbohidrat": "number",
-        "lemak": "number",
-        "deskripsi" : "string",
-        "manfaat": "string",
-        "bahaya": "string"
+        "carb": "number",
+        "fat": "number",
+        "desc": "string",
     }
 }
 ```
@@ -260,10 +250,10 @@
 - Body : (example)
     ```json
     {
-        "kalori": 500,
-        "protein": 90,
-        "karbohidrat": 70,
-        "lemak": 59
+        "cal": "number",
+        "protein": "number",
+        "carb": "number",
+        "fat": "number",
     }
     ```
 **Response** :
@@ -293,23 +283,21 @@
 [
     {
         "_id": "string unique",
-        "porsi": "number",
-        "image": "string",
+        "portion": "number",
+        "healthLabel": ["string"],
         "overview": "string",
-        "bahan": [ "string" ],
-        "waktu": "number",
+        "ingredient": [ "string" ],
+        "timeServing": "number",
         "food": {
             "_id": "string unique",
             "name": "string",
             "image": "string",
             "category": "string unique",
-            "kalori": "number",
+            "cal": "number",
             "protein": "number",
-            "karbohidrat": "number",
-            "lemak": "number",
-            "deskripsi": "string",
-            "manfaat": "string",
-            "bahaya": "string",
+            "carb": "number",
+            "fat": "number",
+            "desc": "string",
             "createdAt": "date",
             "updatedAt": "date"
         },
@@ -329,23 +317,21 @@
 [
     {
         "_id": "string unique",
-        "porsi": "number",
-        "image": "string",
+        "portion": "number",
+        "healthLabel": ["string"],
         "overview": "string",
-        "bahan": [ "string" ],
-        "waktu": "number",
+        "ingredient": [ "string" ],
+        "timeServing": "number",
         "food": {
             "_id": "string unique",
             "name": "string",
             "image": "string",
             "category": "string unique",
-            "kalori": "number",
+            "cal": "number",
             "protein": "number",
-            "karbohidrat": "number",
-            "lemak": "number",
-            "deskripsi": "string",
-            "manfaat": "string",
-            "bahaya": "string",
+            "carb": "number",
+            "fat": "number",
+            "desc": "string",
             "createdAt": "date",
             "updatedAt": "date"
         },
@@ -365,23 +351,21 @@
 [
     {
         "_id": "string unique",
-        "porsi": "number",
-        "image": "string",
+        "portion": "number",
+        "healthLabel": ["string"],
         "overview": "string",
-        "bahan": [ "string" ],
-        "waktu": "number",
+        "ingredient": [ "string" ],
+        "timeServing": "number",
         "food": {
             "_id": "string unique",
             "name": "string",
             "image": "string",
             "category": "string unique",
-            "kalori": "number",
+            "cal": "number",
             "protein": "number",
-            "karbohidrat": "number",
-            "lemak": "number",
-            "deskripsi": "string",
-            "manfaat": "string",
-            "bahaya": "string",
+            "carb": "number",
+            "fat": "number",
+            "desc": "string",
             "createdAt": "date",
             "updatedAt": "date"
         },
@@ -401,11 +385,11 @@
 - Body :
     ```json
     {
-        "porsi": "number",
-        "image": "string",
+        "portion": "number",
+        "healthLabel": ["string"],
         "overview": "string",
-        "bahan": ["string"],
-        "waktu": "number",
+        "ingredient": ["string"],
+        "timeServing": "number",
         "food": "string unique"
     }
     ```
@@ -414,11 +398,11 @@
 {
     "message": "resep added successfully",
     "data": {
-        "porsi": "number",
-        "image": "string",
+        "portion": "number",
+        "healthLabel": ["string"],
         "overview": "string",
-        "bahan": ["string"],
-        "waktu": "number",
+        "ingredient": ["string"],
+        "timeServing": "number",
         "food": "string unique"
     }
 }

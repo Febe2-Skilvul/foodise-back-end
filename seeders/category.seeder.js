@@ -5,19 +5,19 @@ const {MONGODB_URI} = process.env
 
 const dataCreated = [
     new Category({
-        _id : "maindish",
+        _id : "1",
         name : "Main Dish"
     }),
     new Category({
-        _id : "appetizer",
+        _id : "2",
         name : "Appetizer"
     }),
     new Category({
-        _id : "dessert",
+        _id : "3",
         name : "Dessert"
     }),
     new Category({
-        _id : "beverage",
+        _id : "4",
         name : "Beverage"
     }),
 ]

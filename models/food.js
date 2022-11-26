@@ -16,7 +16,7 @@ const foodSchema = new Schema({
         type : String,
         ref : "Category"
     },
-    kalori: {
+    cal: {
         type : Number,
         required : true
     },
@@ -24,21 +24,15 @@ const foodSchema = new Schema({
         type : Number,
         required : true
     },
-    karbohidrat: {
+    carb: {
         type : Number,
         required : true
     },
-    lemak: {
+    fat: {
         type : Number,
         required : true
     },
-    deskripsi: {
-        type : String
-    },
-    manfaat: {
-        type : String
-    },
-    bahaya: {
+    desc: {
         type : String
     }
 }, {
