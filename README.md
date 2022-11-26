@@ -5,7 +5,9 @@
 
 &nbsp;
 
-# **API Documentation**
+# **API DOCUMENTATION**
+
+LINK : 
 
 
 &nbsp;
@@ -143,6 +145,7 @@
         "protein": "number",
         "carb": "number",
         "fat": "number",
+        "carbon": "number",
         "desc": "string",
         "createdAt": "date",
         "updatedAt": "date"
@@ -170,6 +173,7 @@
         "protein": "number",
         "carb": "number",
         "fat": "number",
+        "carbon": "number",
         "desc": "string",
         "createdAt": "date",
         "updatedAt": "date"
@@ -198,6 +202,7 @@
         "carb": "number",
         "fat": "number",
         "desc": "string",
+        "carbon": "number",
         "createdAt": "date",
         "updatedAt": "date"
     }
@@ -224,6 +229,7 @@
         "protein": "number",
         "carb": "number",
         "fat": "number",
+        "carbon": "number",
         "desc": "string",
         "createdAt": "date",
         "updatedAt": "date"
@@ -250,6 +256,7 @@
             "protein": "number",
             "carb": "number",
             "fat": "number",
+            "carbon": "number",
             "desc": "string",
         },
         {
@@ -260,6 +267,7 @@
             "protein": "number",
             "carb": "number",
             "fat": "number",
+            "carbon": "number",
             "desc": "string",
         }
     ]
@@ -277,6 +285,7 @@
             "protein": "number",
             "carb": "number",
             "fat": "number",
+            "carbon": "number",
             "desc": "string",
         },
         {
@@ -287,6 +296,7 @@
             "protein": "number",
             "carb": "number",
             "fat": "number",
+            "carbon": "number",
             "desc": "string",
         }
     ]
@@ -306,6 +316,7 @@
         "protein": "number",
         "carb": "number",
         "fat": "number",
+        "carbon": "number",
     }
     ```
 **Response** :
@@ -349,6 +360,7 @@
             "protein": "number",
             "carb": "number",
             "fat": "number",
+            "carbon": "number",
             "desc": "string",
             "createdAt": "date",
             "updatedAt": "date"
@@ -370,7 +382,7 @@
     {
         "_id": "string unique",
         "portion": "number",
-        "healthLabel": ["string"],
+        "healthScore": "number",
         "overview": "string",
         "ingredient": [ "string" ],
         "timeServing": "number",
@@ -383,6 +395,7 @@
             "protein": "number",
             "carb": "number",
             "fat": "number",
+            "carbon": "number",
             "desc": "string",
             "createdAt": "date",
             "updatedAt": "date"
@@ -404,7 +417,7 @@
     {
         "_id": "string unique",
         "portion": "number",
-        "healthLabel": ["string"],
+        "healthScore": "number",
         "overview": "string",
         "ingredient": [ "string" ],
         "timeServing": "number",
@@ -417,6 +430,7 @@
             "protein": "number",
             "carb": "number",
             "fat": "number",
+            "carbon": "number",
             "desc": "string",
             "createdAt": "date",
             "updatedAt": "date"
@@ -438,7 +452,7 @@
     ```json
     {
         "portion": "number",
-        "healthLabel": ["string"],
+        "healthScore": "number",
         "overview": "string",
         "ingredient": ["string"],
         "timeServing": "number",
@@ -451,7 +465,7 @@
     "message": "resep added successfully",
     "data": {
         "portion": "number",
-        "healthLabel": ["string"],
+        "healthScore": "number",
         "overview": "string",
         "ingredient": ["string"],
         "timeServing": "number",
@@ -541,13 +555,12 @@
             "name": "string",
             "image": "string",
             "category": "string unique",
-            "kalori": "number",
+            "cal": "number",
             "protein": "number",
-            "karbohidrat": "number",
-            "lemak": "number",
-            "deskripsi": "string",
-            "manfaat": "string",
-            "bahaya": "string",
+            "carb": "number",
+            "fat": "number",
+            "carbon": "number",
+            "desc": "string",
             "createdAt": "date",
             "updatedAt": "date"
         },
@@ -564,5 +577,252 @@
 ```json
 {
   "message": "favorite food data deleted successfully"
+}
+```
+# **Nutrition and Carbon Tracking**
+## **Add Tracking of User**
+**Request** :
+- Method : POST
+- Endpoint : `<web-service-api>/tracking`
+- Header : 
+    - Content-Type : application/json
+    - Accept : application/json
+- Body :
+```json
+{
+    "user": "string unique",
+    "tracking": {
+        "date": "date",
+        "food": [
+            {
+                "foodId": "string unique",
+                "portion": "number",
+                "time": "time"
+            },
+            {
+                "foodId": "string unique",
+                "portion": "number",
+                "time": "time"
+            },
+        ],
+        "totCal": "number",
+        "totCarbon": "number"
+    },
+    "totCarb": "number",
+    "totProtein": "number",
+    "totFat": "number"
+}
+```
+**Response** :
+```json
+{
+    "_id": "string unique",
+    "user": "string unique",
+    "tracking": {
+        "date": "date",
+        "food": [
+            {
+                "foodId": {
+                    "_id": "string unique",
+                    "name": "string",
+                    "image": "string",
+                    "category": "string unique",
+                    "cal": "number",
+                    "protein": "number",
+                    "carb": "number",
+                    "fat": "number",
+                    "carbon": "number",
+                    "desc": "100gram"
+                },
+                "portion": "number",
+                "time": "time"
+            },
+            {
+                "foodId": {
+                    "_id": "string unique",
+                    "name": "string",
+                    "image": "string",
+                    "category": "string unique",
+                    "cal": "number",
+                    "protein": "number",
+                    "carb": "number",
+                    "fat": "number",
+                    "carbon": "number",
+                    "desc": "100gram"
+                },
+                "portion": "number",
+                "time": "time"
+            },
+        ],
+        "totCal": "number",
+        "totCarbon": "number"
+    },
+    "totCarb": "number",
+    "totProtein": "number",
+    "totFat": "number"
+}
+```
+## **Get All Tracking of User**
+**Request** :
+- Method : GET
+- Endpoint : `<web-service-api>/tracking`
+- Header : 
+    - Accept : application/json
+**Response** :
+```json
+{
+    "_id": "string unique",
+    "user": "string unique",
+    "tracking": {
+        "date": "date",
+        "food": [
+            {
+                "foodId": {
+                    "_id": "string unique",
+                    "name": "string",
+                    "image": "string",
+                    "category": "string unique",
+                    "cal": "number",
+                    "protein": "number",
+                    "carb": "number",
+                    "fat": "number",
+                    "carbon": "number",
+                    "desc": "100gram"
+                },
+                "portion": "number",
+                "time": "time"
+            },
+            {
+                "foodId": {
+                    "_id": "string unique",
+                    "name": "string",
+                    "image": "string",
+                    "category": "string unique",
+                    "cal": "number",
+                    "protein": "number",
+                    "carb": "number",
+                    "fat": "number",
+                    "carbon": "number",
+                    "desc": "100gram"
+                },
+                "portion": "number",
+                "time": "time"
+            },
+        ],
+        "totCal": "number",
+        "totCarbon": "number"
+    },
+    "createdAt": "date",
+    "updatedAt": "date"
+}
+```
+## **Get Today Tracking of User**
+**Request** :
+- Method : GET
+- Endpoint : `<web-service-api>/tracking/today`
+- Header : 
+    - Accept : application/json
+**Response** :
+```json
+{
+    "_id": "string unique",
+    "user": "string unique",
+    "tracking": {
+        "date": "date",
+        "food": [
+            {
+                "foodId": {
+                    "_id": "string unique",
+                    "name": "string",
+                    "image": "string",
+                    "category": "string unique",
+                    "cal": "number",
+                    "protein": "number",
+                    "carb": "number",
+                    "fat": "number",
+                    "carbon": "number",
+                    "desc": "100gram"
+                },
+                "portion": "number",
+                "time": "time"
+            },
+            {
+                "foodId": {
+                    "_id": "string unique",
+                    "name": "string",
+                    "image": "string",
+                    "category": "string unique",
+                    "cal": "number",
+                    "protein": "number",
+                    "carb": "number",
+                    "fat": "number",
+                    "carbon": "number",
+                    "desc": "100gram"
+                },
+                "portion": "number",
+                "time": "time"
+            },
+        ],
+        "totCal": "number",
+        "totCarbon": "number"
+    },
+    "totCarb": "number",
+    "totProtein": "number",
+    "totFat": "number"
+}
+```
+## **Get Tracking of User Per Date**
+**Request** :
+- Method : GET
+- Endpoint : `<web-service-api>/tracking/{:date}`
+- Header : 
+    - Accept : application/json
+**Response** :
+```json
+{
+    "_id": "string unique",
+    "user": "string unique",
+    "tracking": {
+        "date": "date",
+        "food": [
+            {
+                "foodId": {
+                    "_id": "string unique",
+                    "name": "string",
+                    "image": "string",
+                    "category": "string unique",
+                    "cal": "number",
+                    "protein": "number",
+                    "carb": "number",
+                    "fat": "number",
+                    "carbon": "number",
+                    "desc": "100gram"
+                },
+                "portion": "number",
+                "time": "time"
+            },
+            {
+                "foodId": {
+                    "_id": "string unique",
+                    "name": "string",
+                    "image": "string",
+                    "category": "string unique",
+                    "cal": "number",
+                    "protein": "number",
+                    "carb": "number",
+                    "fat": "number",
+                    "carbon": "number",
+                    "desc": "100gram"
+                },
+                "portion": "number",
+                "time": "time"
+            },
+        ],
+        "totCal": "number",
+        "totCarbon": "number"
+    },
+    "totCarb": "number",
+    "totProtein": "number",
+    "totFat": "number"
 }
 ```

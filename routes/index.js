@@ -15,7 +15,7 @@ router.use("/recipes", resepRoute)
 router.use("/categories", categoryRoute)
 router.use("/admin", adminRoute)
 router.use("/favorites", favRoute)
-router.use("/tracking", favRoute)
+router.use("/tracking", trackingRoute)
 
 
 module.exports = router;

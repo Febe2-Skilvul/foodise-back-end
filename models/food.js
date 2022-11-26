@@ -32,6 +32,10 @@ const foodSchema = new Schema({
         type : Number,
         required : true
     },
+    carbon: {
+        type : Number,
+        required : true
+    },
     desc: {
         type : String
     }
