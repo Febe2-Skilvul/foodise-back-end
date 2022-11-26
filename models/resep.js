@@ -2,23 +2,21 @@ const mongoose = require('mongoose')
 const { Schema } = mongoose
 
 const resepSchema = new Schema({
-    porsi: {
+    portion: {
         type : Number
     },
-    image: {
-        type: String,
-        maxlength: 255,
-        required: true
-    },
+    healthLabel: [{
+        type: String
+    }],
     overview: {
         type : String,
         required: true
     },
-    bahan: [{
+    ingredient: [{
         type : String
     }],
-    waktu: {
-        type : Number
+    timeServing: {
+        type: Number
     },
     food: {
         type : mongoose.ObjectId,
