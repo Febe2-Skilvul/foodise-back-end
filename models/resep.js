@@ -5,8 +5,8 @@ const resepSchema = new Schema({
     portion: {
         type : Number
     },
-    healthLabel: [{
-        type: String
+    healthScore: [{
+        type: Number
     }],
     overview: {
         type : String,

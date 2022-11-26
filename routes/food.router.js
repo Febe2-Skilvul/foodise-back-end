@@ -6,6 +6,7 @@ const {
     getSearch,
     getById,
     add,
+    addMany,
     edit,
     getByCategory
 } = require('../controllers/food.controller')
@@ -18,7 +19,7 @@ foodRoute.get("/", getAll)
 foodRoute.get("/search", getSearch)
 foodRoute.get("/:id", getById)
 foodRoute.get("/category/:category", getByCategory)
-foodRoute.post("/", [tokenVerified, onlyAdmin], add)
+foodRoute.post("/", [tokenVerified, onlyAdmin], addMany)
 foodRoute.patch("/:id", [tokenVerified, onlyAdmin], edit)
 
 

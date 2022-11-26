@@ -231,7 +231,7 @@
 ]
 ```
 
-## **Add Food Data (ADMIN)**
+## **Add Many Foods (ADMIN)**
 **Request** :
 - Method : POST
 - Endpoint : `<web-service-api>/foods`
@@ -240,31 +240,56 @@
     - Accept : application/json
 - Body :
     ```json
-    {
-        "name":"string <lowercase>",
-        "image": "string",
-        "category":"string unique",
-        "cal": "number",
-        "protein": "number",
-        "carb": "number",
-        "fat": "number",
-        "desc": "string",
-    }
+
+    [
+        {
+            "name":"string ",
+            "image": "string",
+            "category":"string unique",
+            "cal": "number",
+            "protein": "number",
+            "carb": "number",
+            "fat": "number",
+            "desc": "string",
+        },
+        {
+            "name":"string",
+            "image": "string",
+            "category":"string unique",
+            "cal": "number",
+            "protein": "number",
+            "carb": "number",
+            "fat": "number",
+            "desc": "string",
+        }
+    ]
     ```
 **Response** :
 ```json
 {
     "message": "food added successfully",
-    "data": {
-        "name":"string",
-        "image": "string",
-        "category":"string unique",
-        "cal": "number",
-        "protein": "number",
-        "carb": "number",
-        "fat": "number",
-        "desc": "string",
-    }
+    "data": [
+        {
+            "name":"string ",
+            "image": "string",
+            "category":"string unique",
+            "cal": "number",
+            "protein": "number",
+            "carb": "number",
+            "fat": "number",
+            "desc": "string",
+        },
+        {
+            "name":"string",
+            "image": "string",
+            "category":"string unique",
+            "cal": "number",
+            "protein": "number",
+            "carb": "number",
+            "fat": "number",
+            "desc": "string",
+        }
+    ]
 }
 ```
 ## **Update Food Data (ADMIN)**
@@ -311,7 +336,7 @@
     {
         "_id": "string unique",
         "portion": "number",
-        "healthLabel": ["string"],
+        "healthScore": "number",
         "overview": "string",
         "ingredient": [ "string" ],
         "timeServing": "number",

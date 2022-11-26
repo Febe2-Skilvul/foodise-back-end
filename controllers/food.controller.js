@@ -43,11 +43,9 @@ module.exports = {
     
 
     // only admin
-    add: async (request, response) => {
+    addMany: async (request, response) => {
         try {
-            const data = request.body
-            const foodCreated = new Food(data)
-            await foodCreated.save()
+            const data = await Food.insertMany(request.body)
             response.status(201).send({
                 message: "food added successfully",
                 data
