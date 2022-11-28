@@ -1,10 +1,3 @@
-# **Design Database**
-<div align = 'justify'>membuat design database dengan tools draw.io:
-
-![foodise-ERD]()
-
-&nbsp;
-
 # **API DOCUMENTATION**
 
 LINK : 
@@ -18,7 +11,7 @@ LINK :
 ## **Sign Up**
 **Request** :
 - Method : POST
-- Endpoint : `<web-service-api>/auth/signup`
+- Endpoint : https://o76ho3.deta.dev/auth/signup
 - Header : 
     - Content-Type : application/json
     - Accept : application/json
@@ -62,7 +55,7 @@ LINK :
 ## **Sign In**
 **Request** :
 - Method : POST
-- Endpoint : `<web-service-api>/auth/signin`
+- Endpoint : https://o76ho3.deta.dev/auth/signin
 - Header : 
     - Content-Type : application/json
     - Accept : application/json
@@ -100,7 +93,7 @@ LINK :
 ## **Sign In (ADMIN)**
 **Request** :
 - Method : POST
-- Endpoint : `<web-service-api>/admin/signin`
+- Endpoint : https://o76ho3.deta.dev/admin/signin
 - Header : 
     - Content-Type : application/json
     - Accept : application/json
@@ -127,7 +120,7 @@ LINK :
 ## **Get All Food Data**
 **Request**
 - Method : GET
-- Endpoint : `<web-service-api>/foods`
+- Endpoint : https://o76ho3.deta.dev/foods
 - Header : 
     - Accept : application/json
 **Response** :
@@ -155,7 +148,7 @@ LINK :
 ## **Get Food Data by Food Id**
 **Request** :
 - Method : GET
-- Endpoint : `<web-service-api>/foods/{:food_id}`
+- Endpoint : https://o76ho3.deta.dev/foods/{:food_id}
 - Header : 
     - Accept : application/json
 **Response** :
@@ -183,7 +176,7 @@ LINK :
 ## **Get Food By Category**
 **Request** :
 - Method : GET
-- Endpoint : `<web-service-api>/foods/category/{:category_id}`
+- Endpoint : https://o76ho3.deta.dev/foods/category/{:category_id}
 - Header : 
     - Accept : application/json
 **Response** :
@@ -211,7 +204,7 @@ LINK :
 ## **Search Food Data**
 **Request** :
 - Method : GET
-- Endpoint : `<web-service-api>/foods/search?name={:query}`
+- Endpoint : https://o76ho3.deta.dev/foods/search?name={:query}
 - Header : 
     - Accept : application/json
 **Response** :
@@ -240,7 +233,7 @@ LINK :
 ## **Add Many Foods (ADMIN)**
 **Request** :
 - Method : POST
-- Endpoint : `<web-service-api>/foods`
+- Endpoint : https://o76ho3.deta.dev/foods
 - Header : 
     - Content-Type : application/json
     - Accept : application/json
@@ -305,7 +298,7 @@ LINK :
 ## **Update Food Data (ADMIN)**
 **Request** :
 - Method : PATCH
-- Endpoint : `<web-service-api>/foods/{:food_id}`
+- Endpoint : https://o76ho3.deta.dev/foods/{:food_id}
 - Header : 
     - Content-Type : application/json
     - Accept : application/json
@@ -338,7 +331,7 @@ LINK :
 ## **Get All Recipes**
 **Request** :
 - Method : GET
-- Endpoint : `<web-service-api>/recipes`
+- Endpoint : https://o76ho3.deta.dev/recipes
 - Header : 
     - Accept : application/json
 **Response** :
@@ -373,7 +366,7 @@ LINK :
 ## **Get Recipe By Recipe Id**
 **Request** :
 - Method : GET
-- Endpoint : `<web-service-api>/recipes/{:recipe_id}`
+- Endpoint : https://o76ho3.deta.dev/recipes/{:recipe_id}
 - Header : 
     - Accept : application/json
 **Response** :
@@ -408,7 +401,7 @@ LINK :
 ## **Get Recipe By Food Id**
 **Request** :
 - Method : GET
-- Endpoint : `<web-service-api>/recipes/food/{:food_id}`
+- Endpoint : https://o76ho3.deta.dev/recipes/food/{:food_id}
 - Header : 
     - Accept : application/json
 **Response** :
@@ -444,7 +437,7 @@ LINK :
 ## **Add Recipe (ADMIN)**
 **Request** :
 - Method : POST
-- Endpoint : `<web-service-api>/recipes`
+- Endpoint : https://o76ho3.deta.dev/recipes
 - Header : 
     - Content-Type : application/json
     - Accept : application/json
@@ -477,7 +470,7 @@ LINK :
 ## **Get All Categories**
 **Request** :
 - Method : GET
-- Endpoint : `<web-service-api>/categories`
+- Endpoint : https://o76ho3.deta.dev/categories
 - Header : 
     - Accept : application/json
 **Response** :
@@ -492,7 +485,7 @@ LINK :
 ## **Add Category (ADMIN)**
 **Request** :
 - Method : POST
-- Endpoint : `<web-service-api>/categories`
+- Endpoint : https://o76ho3.deta.dev/categories
 - Header : 
     - Content-Type : application/json
     - Accept : application/json
@@ -517,7 +510,7 @@ LINK :
 ## **Add Favorite Food**
 **Request** :
 - Method : POST
-- Endpoint : `<web-service-api>/favorites`
+- Endpoint : https://o76ho3.deta.dev/favorites
 - Header : 
     - Content-Type : application/json
     - Accept : application/json
@@ -541,7 +534,7 @@ LINK :
 ## **Get Favorite Food**
 **Request** :
 - Method : GET
-- Endpoint : `<web-service-api>/favorites`
+- Endpoint : https://o76ho3.deta.dev/favorites
 - Header : 
     - Accept : application/json
 **Response** :
@@ -570,7 +563,7 @@ LINK :
 ## **Delete Favorite Food**
 **Request** :
 - Method : DELETE
-- Endpoint : `<web-service-api>/favorites/{:favorite_id}`
+- Endpoint : https://o76ho3.deta.dev/favorites/{:favorite_id}
 - Header : 
     - Accept : application/json
 **Response** :
@@ -583,7 +576,7 @@ LINK :
 ## **Add Tracking of User**
 **Request** :
 - Method : POST
-- Endpoint : `<web-service-api>/tracking`
+- Endpoint : https://o76ho3.deta.dev/tracking
 - Header : 
     - Content-Type : application/json
     - Accept : application/json
@@ -665,7 +658,7 @@ LINK :
 ## **Get All Tracking of User**
 **Request** :
 - Method : GET
-- Endpoint : `<web-service-api>/tracking`
+- Endpoint : https://o76ho3.deta.dev/tracking
 - Header : 
     - Accept : application/json
 **Response** :
@@ -719,7 +712,7 @@ LINK :
 ## **Get Today Tracking of User**
 **Request** :
 - Method : GET
-- Endpoint : `<web-service-api>/tracking/today`
+- Endpoint : https://o76ho3.deta.dev/tracking/today
 - Header : 
     - Accept : application/json
 **Response** :
@@ -774,7 +767,7 @@ LINK :
 ## **Get Tracking of User Per Date**
 **Request** :
 - Method : GET
-- Endpoint : `<web-service-api>/tracking/{:date}`
+- Endpoint : https://o76ho3.deta.dev/tracking/{:date}
 - Header : 
     - Accept : application/json
 **Response** :
@@ -824,5 +817,136 @@ LINK :
     "totCarb": "number",
     "totProtein": "number",
     "totFat": "number"
+}
+```
+
+# **Profile and Account**
+## **Get Profile**
+**Request** :
+- Method : GET
+- Endpoint : https://o76ho3.deta.dev/profile
+- Header : 
+    - Accept : application/json
+**Response** :
+```json
+{
+    "_id": "string",
+    "username": "string",
+    "email": "string",
+    "gender": "string",
+    "password": "string encrypted",
+    "tinggi": "number",
+    "berat": "number",
+    "levelAktivitas": {
+        "val": "number",
+        "ket": "string"
+    },
+    "umur": "number",
+    "caloriNeeded": "number",
+    "proteinNeeded": "number",
+    "fatNeeded": "number",
+    "carboNeeded": "number",
+    "createdAt": "date",
+    "updatedAt": "date"
+}
+```
+## **Edit Profile**
+**Request** :
+- Method : PUT
+- Endpoint : https://o76ho3.deta.dev/profile
+- Header : 
+    - Content-Type : application/json
+    - Accept : application/json
+- Body : (example)
+    ```json
+    {
+        "username": "string",
+        "gender": "string",
+        "tinggi": "number",
+        "berat": "number",
+        "levelAktivitas": "number",
+        "umur": "number"
+    }
+    ```
+**Response** :
+```json
+{
+    "message": "profile has been changed successfully",
+    "changeSuccess": {
+        "username": "string",
+        "gender": "string",
+        "tinggi": "number",
+        "berat": "number",
+        "umur": "number",
+        "levelAktivitas": "number",
+        "caloriNeeded": "number",
+        "carboNeeded": "number",
+        "proteinNeeded": "number",
+        "fatNeeded": "number"
+    }
+}
+```
+## **Edit Account (Email and Password)**
+**Request** :
+- Method : PUT
+- Endpoint : https://o76ho3.deta.dev/profile/account
+- Header : 
+    - Content-Type : application/json
+    - Accept : application/json
+- Body : (example)
+    ```json
+    {
+        "email": "string",
+        "currentPassword": "string",
+        "newPassword": "string",
+        "confirmPassword": "string"
+    }
+    ```
+**Response** :
+```json
+{
+  "message": "string",
+  "changed": {
+    "email": "string",
+    "password": "string encrypted"
+  }
+}
+```
+## **Change Password**
+**Request** :
+- Method : PUT
+- Endpoint : https://o76ho3.deta.dev/profile/change-password
+- Header : 
+    - Content-Type : application/json
+    - Accept : application/json
+- Body : (example)
+    ```json
+    {
+        "currentPassword":"string",
+        "newPassword":"string",
+        "confirmPassword":"string"
+    }
+    ```
+**Response** :
+```json
+{
+    "message": "Password have been Changed successfully",
+    "success": {
+        "_id": "string",
+        "username": "string",
+        "email": "string",
+        "gender": "string",
+        "password": "string encrypted",
+        "tinggi": "number",
+        "berat": "number",
+        "levelAktivitas": "number",
+        "umur": "number",
+        "caloriNeeded": "number",
+        "proteinNeeded": "number",
+        "fatNeeded": "number",
+        "carboNeeded": "number",
+        "createdAt": "date",
+        "updatedAt": "date"
+    }
 }
 ```
