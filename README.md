@@ -1,11 +1,11 @@
-# **API DOCUMENTATION**
+# API DOCUMENTATION
 
-LINK : 
+LINK : https://documenter.getpostman.com/view/24388906/2s8Yt1qocp
 
 
 &nbsp;
 
-# **API SPECIFICATION**
+# API SPECIFICATION
 &nbsp;
 # **Login Register**
 ## **Sign Up**
