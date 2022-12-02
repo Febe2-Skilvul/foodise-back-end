@@ -28,7 +28,7 @@ module.exports = {
         }
     },
 
-    // only admin
+    // admin accessibility
     add: async (request, response) => {
         const data = request.body
         const resepExist = await Resep.findOne({ food: data.food })
@@ -43,6 +43,23 @@ module.exports = {
             } else {
                 response.status(400).send({
                     message: "food's recipe is exist"
+                })
+            }
+        } catch (error) {
+            response.status(500).send({ message: error.message })
+        }
+    },
+    edit: async (request, response) => {
+        try {
+            const { id } = request.params
+            const update = request.body
+            if (Object.keys(update).length === 0) {
+                response.send({ message: "there is nothing to update "})
+            } else {
+                const resepUpdated = await Resep.findOneAndUpdate({ _id: id }, update)
+                response.send({ 
+                    message: "update success", 
+                    resepUpdated
                 })
             }
         } catch (error) {

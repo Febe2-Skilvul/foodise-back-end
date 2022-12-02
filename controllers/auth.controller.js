@@ -78,6 +78,7 @@ module.exports = {
                 response.status(201).send({
                     message: "success",
                     token: tokenCreated,
+                    _id: userSaved._id,
                     username: username,
                     email: email,
                     gender: gender,
@@ -116,6 +117,7 @@ module.exports = {
                     response.status(200).send({ 
                         message: "login success, welcome !",
                         token: tokenCreated,
+                        _id: user.id,
                         username: user.username,
                         email: user.email,
                         gender: user.gender,

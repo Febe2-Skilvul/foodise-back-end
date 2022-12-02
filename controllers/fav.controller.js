@@ -15,7 +15,7 @@ module.exports = {
                     fav.save()
                     response.send({
                         message: "favorite food data added successfully",
-                        "favorite food": newFav
+                        "favorite": fav._id, newFav
                     })
                 } else {
                     response.send({ message: "the food have already exist on your favorite" })

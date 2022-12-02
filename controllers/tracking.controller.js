@@ -6,29 +6,26 @@ module.exports = {
     addTracking: async (request, response) => {
         const { data } = tokenReturned(request, response)
         const userId = data._id
-        let {food, totCal, totCarbon} = request.body
+        let {food} = request.body
         try {
             const trackExist = await Tracking.findOne({user: userId})
-            let today = new Date()
-            today = today.toLocaleDateString('fr-CA')
-            time = new Date().toLocaleTimeString()
+            const tanggal = new Date()
+            let today = tanggal.toLocaleDateString('fr-CA')
+            let time = new Date().toLocaleTimeString()
 
             food.map(item => item.time = time)
-
             const tracking = {
                 date: today,
-                food: food,
-                totCal: totCal,
-                totCarbon: totCarbon
+                food: food
             }
-
+            
             if (trackExist) {
                 const trackingIndex = findByDate(trackExist.tracking, today)
 
                 if (trackingIndex > -1) {
                     food.map(item => trackExist.tracking[trackingIndex].food.push(item))
-                    trackExist.tracking[trackingIndex].totCal += totCal
-                    trackExist.tracking[trackingIndex].totCarbon += totCarbon
+                    // trackExist.tracking[trackingIndex].totCal += totCal
+                    // trackExist.tracking[trackingIndex].totCarbon += totCarbon
 
                     await trackExist.save()
 
@@ -36,6 +33,8 @@ module.exports = {
                     trackExist.tracking.push(tracking)
                     await trackExist.save()
                 }
+
+                
 
                 response.send({ message: 'tracking added successfully', tracking})
 
@@ -95,7 +94,7 @@ module.exports = {
                     todayTrack = tracking.tracking[todayTracking]
                 }
             
-                const {totCarb, totProtein, totFat} = totalNutri(todayTrack)
+                const {totCarb, totProtein, totFat, totCal, totCarbon} = totalNutri(todayTrack)
             
                 response.send({
                     _id: tracking._id,
@@ -103,7 +102,9 @@ module.exports = {
                     tracking: todayTrack,
                     totCarb: totCarb,
                     totProtein: totProtein,
-                    totFat : totFat
+                    totFat : totFat,
+                    totCal : totCal,
+                    totCarbon : totCarbon
                 })
             } else {
                 response.send(null)
@@ -139,7 +140,7 @@ module.exports = {
                 if (dateTracking > -1) {
                     dateTrack = tracking.tracking[dateTracking]
                 }
-                const { totCarb, totFat, totProtein } = totalNutri(dateTrack)
+                const { totCarb, totFat, totProtein, totCal, totCarbon} = totalNutri(dateTrack)
 
                 response.send({
                     _id: tracking._id,
@@ -147,7 +148,9 @@ module.exports = {
                     tracking: dateTrack,
                     totCarb: totCarb,
                     totProtein: totProtein,
-                    totFat: totFat
+                    totFat: totFat,
+                    totCal: totCal,
+                    totCarbon: totCarbon
                 })
             } else {
                 response.send(null)

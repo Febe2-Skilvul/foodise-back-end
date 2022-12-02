@@ -20,13 +20,7 @@ const foodTrackingSchema = new Schema({
             type: String,
             required: true
         }
-    }, {_id: false}],
-    totCal: {
-        type: Number
-    },
-    totCarbon: {
-        type: Number
-    }
+    }, {_id: false}]
 }, {_id: false})
 
 const trackingSchema = new Schema({

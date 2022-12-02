@@ -42,7 +42,7 @@ module.exports = {
     },
     
 
-    // only admin
+    // admin accessibility
     addMany: async (request, response) => {
         try {
             const data = await Food.insertMany(request.body)
