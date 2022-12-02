@@ -5,13 +5,13 @@ const resepSchema = new Schema({
     portion: {
         type : Number
     },
-    healthScore: {
+    nutriScore: {
         type: Number
     },
-    overview: {
+    overview: [{
         type : String,
         required: true
-    },
+    }],
     ingredient: [{
         type : String
     }],

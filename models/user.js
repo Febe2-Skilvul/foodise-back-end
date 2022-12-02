@@ -21,14 +21,6 @@ const userSchema = new Schema({
         maxlength: 255,
         required : true
     },
-    tracking_nutrisi: {
-        type: mongoose.ObjectId,
-        ref: "NutriTracking"
-    },
-    tracking_carbon: {
-        type: mongoose.ObjectId,
-        ref: "CarbonTracking"
-    },
     tinggi: {
         type: Number,
         maxlength: 3

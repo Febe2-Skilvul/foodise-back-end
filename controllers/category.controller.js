@@ -10,7 +10,7 @@ module.exports = {
         }
     },
 
-    // only admin
+    // admin accessibility
     add: async (request, response) => {
         try {
             const data = request.body
